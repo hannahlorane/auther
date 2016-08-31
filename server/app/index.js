@@ -24,9 +24,9 @@ validFrontendRoutes.forEach(function (stateRoute) {
   });
 });
 
-// app.use('/login', require("../login.router"));
+app.use('/login', require("../login.router"));
 
-// app.use('/signup', require("../signup.router"))
+app.use('/signup', require("../signup.router"));
 
 app.use(require('./statics.middleware'));
 

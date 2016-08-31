@@ -1,8 +1,9 @@
 app.factory('SignupFactory', function($http){
   var signup = {};
 
-  signup.submitSignup = function(e, p){
-    $http.post({email: e, password: p})
+  signup.submitSignup = function(user){
+    console.log(user);
+    return $http.post('/signup', {email: user.email, password: user.password});
   }
   return signup;
 })
